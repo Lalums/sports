@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: sports
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -29,7 +29,7 @@ metadata:
 spec:
   selector:
     app: sports
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 80
