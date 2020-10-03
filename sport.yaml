@@ -8,14 +8,14 @@ spec:
   selector:
     matchLabels:
       app: sports
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
         app: sports
     spec:
       containers:
-      - image: ratheeshlalukms/sports:241
+      - image: ratheeshlalukms/sports:#{Build.BuildId}#
         name: sports
         ports:
         - containerPort: 80
