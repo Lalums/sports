@@ -15,7 +15,7 @@ spec:
         app: sports
     spec:
       containers:
-      - image: ratheeshlalukms/sports:#{Build.BuildId}#
+      - image: ratheeshlalukms/sports:241
         name: sports
         ports:
         - containerPort: 80
