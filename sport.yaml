@@ -18,7 +18,7 @@ spec:
       - image: ratheeshlalukms/sports:#{Build.BuildId}#
         name: sports
         ports:
-        - containerPort: 80
+        - containerPort: 5000
 
 ---
 
@@ -32,6 +32,6 @@ spec:
   type: LoadBalancer
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 80
+    port: 5000
+    targetPort: 6000
 #   nodePort: 31000
