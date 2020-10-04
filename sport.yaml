@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: sports
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -18,7 +18,7 @@ spec:
       - image: ratheeshlalukms/sports:#{Build.BuildId}#
         name: sports
         ports:
-        - containerPort: 5000
+        - containerPort: 80
 
 ---
 
@@ -32,6 +32,6 @@ spec:
   type: LoadBalancer
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 6000
+    port: 80
+    targetPort: 80
 #   nodePort: 31000
